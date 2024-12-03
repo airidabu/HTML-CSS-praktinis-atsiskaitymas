@@ -1,5 +1,6 @@
-@use 'variables/colors';
-@use 'variables/font-styles';
+@use 'colors';
+@use 'font-styles';
+@use 'buttons';
 
 *,
 *::after,
@@ -9,12 +10,34 @@
 
 body {
     margin: 0;
-    background-color: colors.$white-bg;
+    background-color: colors.$white;
     font-family: "Figtree", sans-serif;
 
     header {
         display: flex;
         justify-content: space-between;
         margin: 40px 32px;
+    }
+
+    main {
+       .welcome-card {
+        margin-left: 32px;
+        margin-right: 98px;
+        h1 {
+            font-size: 24px;
+        }
+        p {
+            font-size: 10px;
+        }
+        a.get-started-button {
+            @include buttons.green-button;
+            font-size: 10px;
+            display: flex;
+            justify-content: space-between;
+            img {
+                display: block;
+            }
+        }
+       }
     }
 }

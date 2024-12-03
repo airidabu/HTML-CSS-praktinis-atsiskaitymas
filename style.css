@@ -13,4 +13,29 @@ body header {
   display: flex;
   justify-content: space-between;
   margin: 40px 32px;
+}
+body main .welcome-card {
+  margin-left: 32px;
+  margin-right: 98px;
+}
+body main .welcome-card h1 {
+  font-size: 24px;
+}
+body main .welcome-card p {
+  font-size: 10px;
+}
+body main .welcome-card a.get-started-button {
+  padding: 13px 15px;
+  color: white;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: rgb(100, 123, 100);
+  background: linear-gradient(90deg, rgb(100, 123, 100) 0%, rgb(102, 172, 102) 100%);
+  font-size: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+body main .welcome-card a.get-started-button img {
+  display: block;
 }/*# sourceMappingURL=style.css.map */
