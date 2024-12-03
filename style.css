@@ -19,10 +19,14 @@ body main .welcome-card {
   margin-right: 98px;
 }
 body main .welcome-card h1 {
-  font-size: 24px;
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #333333;
 }
 body main .welcome-card p {
   font-size: 10px;
+  color: #4F4F4F;
 }
 body main .welcome-card a.get-started-button {
   padding: 13px 15px;
@@ -32,10 +36,154 @@ body main .welcome-card a.get-started-button {
   text-transform: uppercase;
   background: rgb(100, 123, 100);
   background: linear-gradient(90deg, rgb(100, 123, 100) 0%, rgb(102, 172, 102) 100%);
-  font-size: 10px;
   display: flex;
   justify-content: space-between;
+  font-size: 10px;
+  width: 80%;
 }
 body main .welcome-card a.get-started-button img {
   display: block;
+}
+body main .features-card .description {
+  margin-left: 32px;
+  margin-right: 85px;
+  margin-bottom: 36px;
+}
+body main .features-card .description h2 {
+  color: #647B64;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+body main .features-card .description h2 .orange-text {
+  color: #F3B562;
+  text-transform: uppercase;
+  font-size: 12px;
+  display: block;
+}
+body main .features-card .description p {
+  color: #4F4F4F;
+  font-size: 10px;
+}
+body main .features-card .description a.get-started-button {
+  padding: 13px 15px;
+  color: white;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: rgb(100, 123, 100);
+  background: linear-gradient(90deg, rgb(100, 123, 100) 0%, rgb(102, 172, 102) 100%);
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  width: 80%;
+}
+body main .features-card .features {
+  margin-left: 32px;
+  margin-right: 32px;
+  margin-top: 36px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+body main .features-card .features .feature-item {
+  font-size: 8px;
+  color: #4F4F4F;
+  padding: 21px 21px 25px 21px;
+}
+body main .features-card .features .feature-item h3 {
+  font-size: 10px;
+  text-transform: uppercase;
+}
+body main .additional-features {
+  margin-left: 32px;
+  margin-right: 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+body main .additional-features h2 {
+  grid-column: 1/span 2;
+  justify-self: center;
+  font-weight: 400;
+  color: #647B64;
+  text-transform: uppercase;
+}
+body main .additional-features h2 span {
+  color: #F3B562;
+  text-transform: uppercase;
+  font-size: 12px;
+  display: block;
+  justify-self: center;
+}
+body main .additional-features .additional-item {
+  padding: 34px 22px 31px 22px;
+  font-size: 8px;
+}
+body main .additional-features .additional-item h3 {
+  font-size: 10px;
+  text-transform: uppercase;
+}
+body main .connect {
+  margin-left: 32px;
+  margin-right: 32px;
+}
+body main .connect h2 {
+  color: #647B64;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+body main .connect h2 .orange-text {
+  color: #F3B562;
+  text-transform: uppercase;
+  font-size: 12px;
+  display: block;
+}
+body main .connect p {
+  font-size: 10px;
+  margin-bottom: 25px;
+}
+body main .connect a.get-started-button {
+  padding: 13px 15px;
+  color: white;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: rgb(100, 123, 100);
+  background: linear-gradient(90deg, rgb(100, 123, 100) 0%, rgb(102, 172, 102) 100%);
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  width: 80%;
+}
+body main .employees {
+  margin-left: 35px;
+}
+body main .employees h2 {
+  color: #647B64;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 22px;
+}
+body main .employees h2 span.orange-text {
+  color: #F3B562;
+  text-transform: uppercase;
+  font-size: 12px;
+  display: block;
+}
+body main .employees .employee-card {
+  margin-right: 85px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+body main .employees .employee-card img {
+  display: block;
+}
+body main .employees .employee-card .name-position .position {
+  font-size: 10px;
+  text-transform: uppercase;
+}
+body main .employees .employee-card .name-position .name {
+  font-size: 8px;
+}
+body main .employees .employee-card p {
+  grid-column: 1/span 2;
+  font-size: 12px;
 }/*# sourceMappingURL=style.css.map */

@@ -1,2 +1,13 @@
-$basic-font: '"Figtree", sans-serif';
+$basic-font: "Figtree", sans-serif;
 
+@mixin orange {
+    color: #F3B562;
+    text-transform: uppercase;
+    font-size: 12px;
+    display: block;
+}
+
+@mixin green {
+    color: #647B64;
+    text-transform: uppercase;
+}

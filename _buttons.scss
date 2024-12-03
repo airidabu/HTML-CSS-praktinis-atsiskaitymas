@@ -6,4 +6,7 @@
     text-transform: uppercase;
     background: rgb(100, 123, 100);
     background: linear-gradient(90deg, rgba(100, 123, 100, 1) 0%, rgba(102, 172, 102, 1) 100%);
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
 }
