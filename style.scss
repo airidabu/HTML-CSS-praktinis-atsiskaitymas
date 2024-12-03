@@ -1,11 +1,17 @@
 @use 'variables/colors';
+@use 'variables/font-styles';
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
     box-sizing: border-box;
 }
+
 body {
     margin: 0;
     background-color: colors.$white-bg;
+    font-family: "Figtree", sans-serif;
+
     header {
         display: flex;
         justify-content: space-between;
