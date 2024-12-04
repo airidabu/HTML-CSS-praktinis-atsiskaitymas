@@ -1,6 +1,7 @@
 @use 'colors';
 @use 'font-styles' as fnt;
 @use 'buttons';
+@use 'responsive' as res;
 
 *,
 *::after,
@@ -32,6 +33,10 @@ body {
             background: rgb(239, 128, 49);
             background: linear-gradient(180deg, rgba(239, 128, 49, 0.15) 69%, rgba(239, 128, 49, 0) 100%);
             position: relative;
+            @include res.xl {
+                padding-left: 180px;
+                padding-right: 200px;
+            }
 
             .item {
                 grid-column: span 2;
@@ -42,11 +47,17 @@ body {
                     font-weight: 400;
                     text-transform: uppercase;
                     color: colors.$grey-1;
+                    @include res.xl {
+                        font-size: 42px;
+                    }
                 }
 
                 p {
                     font-size: 10px;
                     color: colors.$grey-2;
+                    @include res.xl {
+                        font-size: 20px;
+                    }
                 }
 
                 a.get-started-button {
@@ -64,28 +75,48 @@ body {
                     object-fit: cover;
                     position: absolute;
                     right: 0;
+                    @include res.m {
+                        position: relative;
+                        height: 200px;
+                    }
+                    @include res.xl {
+                        height: 586px;
+                    }
                 }
             }
         }
 
         .features-card {
+            @include res.xl {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                padding-left: 140px;
+                padding-right: 177px;
+            }
             .description {
                 margin-left: 32px;
                 margin-right: 85px;
                 margin-bottom: 36px;
-
                 h2 {
                     @include fnt.green;
                     font-weight: 400;
-
+                    @include res.xl {
+                        font-size: 40px;
+                    }
                     .orange-text {
                         @include fnt.orange;
+                        @include res.xl {
+                            font-size: 24px;
+                        }
                     }
                 }
 
                 p {
                     color: colors.$grey-2;
-                    font-size: 10px
+                    font-size: 10px;
+                    @include res.xl {
+                        font-size: 16px;
+                    }
                 }
 
                 a.get-started-button {
@@ -105,10 +136,16 @@ body {
                     font-size: 8px;
                     color: colors.$grey-2;
                     padding: 21px 21px 25px 21px;
+                    @include res.xl {
+                        font-size: 13px;
+                    }
 
                     h3 {
                         font-size: 10px;
                         text-transform: uppercase;
+                        @include res.xl {
+                            font-size: 22px;
+                        }
                     }
                 }
 
@@ -234,7 +271,11 @@ body {
             padding-bottom: 40px;
             display: grid;
             grid-template-columns: 1fr 1fr;
-
+            @include res.xl {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                padding-left: 140px;
+                padding-right: 140px;
+            }
             .copyright-wrapper {
                 grid-column: span 2;
                 font-size: 14px;
@@ -243,12 +284,19 @@ body {
                 .copyright:first-of-type {
                     padding-bottom: 8px;
                 }
+
+                @include res.xl {
+                    grid-column: span 1;
+                }
             }
 
             .social-links {
                 grid-column: span 2;
                 padding-bottom: 40px;
                 padding-top: 19px;
+                @include res.xl {
+                    grid-column: span 1;
+                }
             }
 
             .company-links {
@@ -278,7 +326,9 @@ body {
             form {
                 grid-column: span 2;
                 padding-top: 40px;
-
+                @include res.xl {
+                    grid-column: span 1;
+                }
                 label {
                     display: block;
                     width: 100%;

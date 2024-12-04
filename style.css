@@ -25,6 +25,12 @@ body main .welcome-card {
   background: linear-gradient(180deg, rgba(239, 128, 49, 0.15) 69%, rgba(239, 128, 49, 0) 100%);
   position: relative;
 }
+@media (min-width: 1000px) {
+  body main .welcome-card {
+    padding-left: 180px;
+    padding-right: 200px;
+  }
+}
 body main .welcome-card .item {
   grid-column: span 2;
 }
@@ -35,9 +41,19 @@ body main .welcome-card .item h1 {
   text-transform: uppercase;
   color: #333333;
 }
+@media (min-width: 1000px) {
+  body main .welcome-card .item h1 {
+    font-size: 42px;
+  }
+}
 body main .welcome-card .item p {
   font-size: 10px;
   color: #4F4F4F;
+}
+@media (min-width: 1000px) {
+  body main .welcome-card .item p {
+    font-size: 20px;
+  }
 }
 body main .welcome-card .item a.get-started-button {
   padding: 13px 15px;
@@ -61,6 +77,25 @@ body main .welcome-card .img img {
   position: absolute;
   right: 0;
 }
+@media (min-width: 500px) {
+  body main .welcome-card .img img {
+    position: relative;
+    height: 200px;
+  }
+}
+@media (min-width: 1000px) {
+  body main .welcome-card .img img {
+    height: 586px;
+  }
+}
+@media (min-width: 1000px) {
+  body main .features-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 140px;
+    padding-right: 177px;
+  }
+}
 body main .features-card .description {
   margin-left: 32px;
   margin-right: 85px;
@@ -71,15 +106,30 @@ body main .features-card .description h2 {
   text-transform: uppercase;
   font-weight: 400;
 }
+@media (min-width: 1000px) {
+  body main .features-card .description h2 {
+    font-size: 40px;
+  }
+}
 body main .features-card .description h2 .orange-text {
   color: #F3B562;
   text-transform: uppercase;
   font-size: 12px;
   display: block;
 }
+@media (min-width: 1000px) {
+  body main .features-card .description h2 .orange-text {
+    font-size: 24px;
+  }
+}
 body main .features-card .description p {
   color: #4F4F4F;
   font-size: 10px;
+}
+@media (min-width: 1000px) {
+  body main .features-card .description p {
+    font-size: 16px;
+  }
 }
 body main .features-card .description a.get-started-button {
   padding: 13px 15px;
@@ -106,9 +156,19 @@ body main .features-card .features .feature-item {
   color: #4F4F4F;
   padding: 21px 21px 25px 21px;
 }
+@media (min-width: 1000px) {
+  body main .features-card .features .feature-item {
+    font-size: 13px;
+  }
+}
 body main .features-card .features .feature-item h3 {
   font-size: 10px;
   text-transform: uppercase;
+}
+@media (min-width: 1000px) {
+  body main .features-card .features .feature-item h3 {
+    font-size: 22px;
+  }
 }
 body main .features-card .features .feature-item:hover {
   box-shadow: 14px 13px 17px -1px rgba(0, 0, 0, 0.14);
@@ -230,6 +290,13 @@ body footer .footer-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+@media (min-width: 1000px) {
+  body footer .footer-wrapper {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-left: 140px;
+    padding-right: 140px;
+  }
+}
 body footer .footer-wrapper .copyright-wrapper {
   grid-column: span 2;
   font-size: 14px;
@@ -238,10 +305,20 @@ body footer .footer-wrapper .copyright-wrapper {
 body footer .footer-wrapper .copyright-wrapper .copyright:first-of-type {
   padding-bottom: 8px;
 }
+@media (min-width: 1000px) {
+  body footer .footer-wrapper .copyright-wrapper {
+    grid-column: span 1;
+  }
+}
 body footer .footer-wrapper .social-links {
   grid-column: span 2;
   padding-bottom: 40px;
   padding-top: 19px;
+}
+@media (min-width: 1000px) {
+  body footer .footer-wrapper .social-links {
+    grid-column: span 1;
+  }
 }
 body footer .footer-wrapper .company-links h2 {
   color: #647B64;
@@ -282,6 +359,11 @@ body footer .footer-wrapper .support-links ul li {
 body footer .footer-wrapper form {
   grid-column: span 2;
   padding-top: 40px;
+}
+@media (min-width: 1000px) {
+  body footer .footer-wrapper form {
+    grid-column: span 1;
+  }
 }
 body footer .footer-wrapper form label {
   display: block;
