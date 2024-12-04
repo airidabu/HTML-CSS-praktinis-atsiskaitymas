@@ -38,7 +38,7 @@ body main .welcome-card .item h1 {
   margin-top: 0;
   font-size: 18px;
   font-weight: 400;
-  text-transform: uppercase;
+  font-variant: small-caps;
   color: #333333;
 }
 @media (min-width: 1000px) {
@@ -103,8 +103,9 @@ body main .features-card .description {
 }
 body main .features-card .description h2 {
   color: #647B64;
-  text-transform: uppercase;
+  font-variant: small-caps;
   font-weight: 400;
+  font-variant: small-caps;
 }
 @media (min-width: 1000px) {
   body main .features-card .description h2 {
@@ -163,7 +164,7 @@ body main .features-card .features .feature-item {
 }
 body main .features-card .features .feature-item h3 {
   font-size: 10px;
-  text-transform: uppercase;
+  font-variant: small-caps;
 }
 @media (min-width: 1000px) {
   body main .features-card .features .feature-item h3 {
@@ -174,17 +175,23 @@ body main .features-card .features .feature-item:hover {
   box-shadow: 14px 13px 17px -1px rgba(0, 0, 0, 0.14);
 }
 body main .additional-features {
-  margin-left: 32px;
-  margin-right: 32px;
+  padding-left: 32px;
+  padding-right: 32px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+@media (min-width: 1000px) {
+  body main .additional-features {
+    padding-left: 140px;
+    padding-right: 140px;
+  }
 }
 body main .additional-features h2 {
   grid-column: 1/span 2;
   justify-self: center;
   font-weight: 400;
   color: #647B64;
-  text-transform: uppercase;
+  font-variant: small-caps;
 }
 body main .additional-features h2 span {
   color: #F3B562;
@@ -202,12 +209,18 @@ body main .additional-features .additional-item h3 {
   text-transform: uppercase;
 }
 body main .connect {
-  margin-left: 32px;
-  margin-right: 32px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+@media (min-width: 1000px) {
+  body main .connect {
+    padding-left: 140px;
+    padding-right: 140px;
+  }
 }
 body main .connect h2 {
   color: #647B64;
-  text-transform: uppercase;
+  font-variant: small-caps;
   font-weight: 400;
 }
 body main .connect h2 .orange-text {
@@ -234,11 +247,18 @@ body main .connect a.get-started-button {
   width: 80%;
 }
 body main .employees {
-  margin-left: 35px;
+  padding-left: 35px;
+}
+@media (min-width: 1000px) {
+  body main .employees {
+    padding-left: 140px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 body main .employees h2 {
   color: #647B64;
-  text-transform: uppercase;
+  font-variant: small-caps;
   font-weight: 400;
   font-size: 20px;
 }
@@ -322,7 +342,7 @@ body footer .footer-wrapper .social-links {
 }
 body footer .footer-wrapper .company-links h2 {
   color: #647B64;
-  text-transform: uppercase;
+  font-variant: small-caps;
   font-size: 20px;
   text-transform: capitalize;
   font-weight: 400;
@@ -340,7 +360,7 @@ body footer .footer-wrapper .company-links ul li {
 }
 body footer .footer-wrapper .support-links h2 {
   color: #647B64;
-  text-transform: uppercase;
+  font-variant: small-caps;
   font-size: 20px;
   text-transform: capitalize;
   font-weight: 400;
@@ -369,7 +389,7 @@ body footer .footer-wrapper form label {
   display: block;
   width: 100%;
   color: #647B64;
-  text-transform: uppercase;
+  font-variant: small-caps;
   font-size: 20px;
   margin-bottom: 13px;
 }

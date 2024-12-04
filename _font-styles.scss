@@ -9,7 +9,7 @@ $basic-font: "Figtree", sans-serif;
 
 @mixin green {
     color: #647B64;
-    text-transform: uppercase;
+    font-variant: small-caps;
 }
 
 @mixin list-items {
