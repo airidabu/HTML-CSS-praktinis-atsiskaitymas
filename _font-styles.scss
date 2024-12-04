@@ -1,0 +1,26 @@
+$basic-font: "Figtree", sans-serif;
+
+@mixin orange {
+    color: #F3B562;
+    text-transform: uppercase;
+    font-size: 12px;
+    display: block;
+}
+
+@mixin green {
+    color: #647B64;
+    text-transform: uppercase;
+}
+
+@mixin list-items {
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        li{
+            font-size: 16px;
+            text-transform: capitalize;
+            padding-top: 12px;
+        }
+    }
+}
