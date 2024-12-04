@@ -207,6 +207,7 @@ body {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 40px;
+
             @include res.xl {
                 padding-left: 140px;
                 padding-right: 140px;
@@ -218,6 +219,7 @@ body {
                 justify-self: center;
                 font-weight: 400;
                 @include fnt.green;
+
                 @include res.xl {
                     font-size: 40px;
                 }
@@ -225,6 +227,7 @@ body {
                 span {
                     @include fnt.orange;
                     justify-self: center;
+
                     @include res.xl {
                         font-size: 22px;
                     }
@@ -235,6 +238,7 @@ body {
                 padding: 34px 22px 31px 22px;
                 font-size: 8px;
                 background-color: white;
+
                 @include res.xl {
                     font-size: 16px;
                     padding: 78px 50px 72px 50px;
@@ -243,6 +247,7 @@ body {
                 h3 {
                     font-size: 10px;
                     text-transform: uppercase;
+
                     @include res.xl {
                         font-size: 24px;
                     }
@@ -286,12 +291,14 @@ body {
                 h2 {
                     @include fnt.green;
                     font-weight: 400;
+
                     @include res.xl {
                         font-size: 40px;
                     }
 
                     .orange-text {
                         @include fnt.orange;
+
                         @include res.xl {
                             font-size: 24px;
                         }
@@ -301,6 +308,7 @@ body {
                 p {
                     font-size: 10px;
                     margin-bottom: 25px;
+
                     @include res.xl {
                         font-size: 16px;
                     }
@@ -343,7 +351,7 @@ body {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 background: rgb(100, 123, 100);
-                background: linear-gradient(0deg, rgba(100, 123, 100, 0.77) 0%, rgba(100, 123, 100, 0.13) 55%, rgba(100, 123, 100, 0) 66%);
+                background: linear-gradient(0deg, rgba(100, 123, 100, 0.77) 0%, rgba(100, 123, 100, 0) 66%, rgba(100, 123, 100, 0) 100%);
 
                 img {
                     display: block;

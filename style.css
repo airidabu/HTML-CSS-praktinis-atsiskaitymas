@@ -359,7 +359,7 @@ body main .employees .employee-card {
   display: grid;
   grid-template-columns: 1fr 1fr;
   background: rgb(100, 123, 100);
-  background: linear-gradient(0deg, rgba(100, 123, 100, 0.77) 0%, rgba(100, 123, 100, 0.13) 55%, rgba(100, 123, 100, 0) 66%);
+  background: linear-gradient(0deg, rgba(100, 123, 100, 0.77) 0%, rgba(100, 123, 100, 0) 66%, rgba(100, 123, 100, 0) 100%);
 }
 body main .employees .employee-card img {
   display: block;
