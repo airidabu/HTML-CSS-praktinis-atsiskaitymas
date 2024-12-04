@@ -328,19 +328,27 @@ body {
         .employees {
             padding-left: 35px;
 
-            @include res.xl {
+            @include res.m {
                 padding-left: 140px;
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
+                margin-bottom: 172px;
+                margin-top: 197px;
             }
 
             h2 {
                 @include fnt.green;
                 font-weight: 400;
                 font-size: 20px;
+                @include res.m {
+                    font-size: 34px;
+                }
 
                 span.orange-text {
                     @include fnt.orange;
+                    @include res.m {
+                        font-size: 24px;
+                    }
                 }
             }
 
@@ -352,6 +360,13 @@ body {
                 grid-template-columns: 1fr 1fr;
                 background: rgb(100, 123, 100);
                 background: linear-gradient(0deg, rgba(100, 123, 100, 0.77) 0%, rgba(100, 123, 100, 0) 66%, rgba(100, 123, 100, 0) 100%);
+
+                @include res.m {
+                    margin: 0;
+                    padding-left: 40px;
+                    padding-right: 60px;
+                    padding-bottom: 32px;
+                }
 
                 img {
                     display: block;

@@ -333,11 +333,13 @@ body main .connect .connect-item a.get-started-button {
 body main .employees {
   padding-left: 35px;
 }
-@media (min-width: 1000px) {
+@media (min-width: 500px) {
   body main .employees {
     padding-left: 140px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 172px;
+    margin-top: 197px;
   }
 }
 body main .employees h2 {
@@ -346,11 +348,21 @@ body main .employees h2 {
   font-weight: 400;
   font-size: 20px;
 }
+@media (min-width: 500px) {
+  body main .employees h2 {
+    font-size: 34px;
+  }
+}
 body main .employees h2 span.orange-text {
   color: #F3B562;
   text-transform: uppercase;
   font-size: 12px;
   display: block;
+}
+@media (min-width: 500px) {
+  body main .employees h2 span.orange-text {
+    font-size: 24px;
+  }
 }
 body main .employees .employee-card {
   margin-right: 85px;
@@ -360,6 +372,14 @@ body main .employees .employee-card {
   grid-template-columns: 1fr 1fr;
   background: rgb(100, 123, 100);
   background: linear-gradient(0deg, rgba(100, 123, 100, 0.77) 0%, rgba(100, 123, 100, 0) 66%, rgba(100, 123, 100, 0) 100%);
+}
+@media (min-width: 500px) {
+  body main .employees .employee-card {
+    margin: 0;
+    padding-left: 40px;
+    padding-right: 60px;
+    padding-bottom: 32px;
+  }
 }
 body main .employees .employee-card img {
   display: block;
