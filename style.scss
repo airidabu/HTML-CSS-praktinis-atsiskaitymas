@@ -12,6 +12,8 @@
 body {
     margin: 0;
     background-color: colors.$white;
+    background: rgb(239, 128, 49);
+    background: linear-gradient(180deg, rgba(239, 128, 49, 0.15) 0%, rgba(239, 128, 49, 0) 100%);
     font-family: fnt.$basic-font;
 
 
@@ -19,8 +21,37 @@ body {
         display: flex;
         justify-content: space-between;
         padding: 40px 32px;
-        background: rgb(239, 128, 49);
-        background: linear-gradient(180deg, rgba(239, 128, 49, 0) 0%, rgba(239, 128, 49, 0.15) 69%);
+
+        .desktop-navigation {
+            display: none;
+        }
+
+        @include res.m {
+            .mobile-bar {
+                display: none;
+            }
+
+        }
+
+        @include res.m {
+            .mobile-bar {
+                display: none;
+            }
+
+            .desktop-navigation {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+                align-items: center;
+                justify-items: center;
+
+                a.navigation-links {
+                    display: block;
+                    text-decoration: none;
+                    font-variant: small-caps;
+                    color: colors.$grey-1;
+                }
+            }
+        }
     }
 
     main {
@@ -30,12 +61,14 @@ body {
             padding-bottom: 127px;
             // padding-right: 98px;
             grid-template-columns: 1fr 1fr 1fr;
-            background: rgb(239, 128, 49);
-            background: linear-gradient(180deg, rgba(239, 128, 49, 0.15) 69%, rgba(239, 128, 49, 0) 100%);
+            // background: rgb(239, 128, 49);
+            // background: linear-gradient(180deg, rgba(239, 128, 49, 0.15) 69%, rgba(239, 128, 49, 0) 100%);
             position: relative;
+
             @include res.xl {
                 padding-left: 180px;
                 padding-right: 200px;
+                align-items: center;
             }
 
             .item {
@@ -47,6 +80,7 @@ body {
                     font-weight: 400;
                     font-variant: small-caps;
                     color: colors.$grey-1;
+
                     @include res.xl {
                         font-size: 42px;
                     }
@@ -55,6 +89,7 @@ body {
                 p {
                     font-size: 10px;
                     color: colors.$grey-2;
+
                     @include res.xl {
                         font-size: 20px;
                     }
@@ -75,10 +110,12 @@ body {
                     object-fit: cover;
                     position: absolute;
                     right: 0;
+
                     @include res.m {
                         position: relative;
                         height: 200px;
                     }
+
                     @include res.xl {
                         height: 586px;
                     }
@@ -93,19 +130,24 @@ body {
                 padding-left: 140px;
                 padding-right: 177px;
             }
+
             .description {
                 margin-left: 32px;
                 margin-right: 85px;
                 margin-bottom: 36px;
+
                 h2 {
                     @include fnt.green;
                     font-weight: 400;
                     font-variant: small-caps;
+
                     @include res.xl {
                         font-size: 40px;
                     }
+
                     .orange-text {
                         @include fnt.orange;
+
                         @include res.xl {
                             font-size: 24px;
                         }
@@ -115,6 +157,7 @@ body {
                 p {
                     color: colors.$grey-2;
                     font-size: 10px;
+
                     @include res.xl {
                         font-size: 16px;
                     }
@@ -137,6 +180,7 @@ body {
                     font-size: 8px;
                     color: colors.$grey-2;
                     padding: 21px 21px 25px 21px;
+
                     @include res.xl {
                         font-size: 13px;
                     }
@@ -144,6 +188,7 @@ body {
                     h3 {
                         font-size: 10px;
                         font-variant: small-caps;
+
                         @include res.xl {
                             font-size: 22px;
                         }
@@ -151,7 +196,7 @@ body {
                 }
 
                 .feature-item:hover {
-                    box-shadow: 14px 13px 17px -1px rgba(0,0,0,0.14);
+                    box-shadow: 14px 13px 17px -1px rgba(0, 0, 0, 0.14);
                 }
             }
         }
@@ -161,10 +206,12 @@ body {
             padding-right: 32px;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            @include res.xl{
+
+            @include res.xl {
                 padding-left: 140px;
                 padding-right: 140px;
             }
+
             h2 {
                 grid-column: 1 / span 2;
                 justify-self: center;
@@ -191,41 +238,75 @@ body {
         .connect {
             padding-left: 32px;
             padding-right: 32px;
+
+            .connect-item:first-of-type {
+                display: none;
+            }
+
             @include res.xl {
                 padding-left: 140px;
                 padding-right: 140px;
-            }
-            h2 {
-                @include fnt.green;
-                font-weight: 400;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                column-gap: 105px;
+                align-items: center;
 
-                .orange-text {
-                    @include fnt.orange;
+                .connect-item:first-of-type {
+                    display: block;
+                    grid-column: 1 / span 1;
+
+                    img {
+                        object-fit: cover;
+                        width: 563px;
+                        height: 545px;
+                    }
+                }
+
+
+            }
+
+            .connect-item {
+                grid-column: 2 / span 1;
+
+                h2 {
+                    @include fnt.green;
+                    font-weight: 400;
+
+                    .orange-text {
+                        @include fnt.orange;
+                    }
+                }
+
+                p {
+                    font-size: 10px;
+                    margin-bottom: 25px;
+                }
+
+                a.get-started-button {
+                    @include buttons.green-button;
+                    width: 80%;
                 }
             }
 
-            p {
-                font-size: 10px;
-                margin-bottom: 25px;
-            }
 
-            a.get-started-button {
-                @include buttons.green-button;
-                width: 80%;
-            }
+
+
         }
 
         .employees {
             padding-left: 35px;
+
             @include res.xl {
                 padding-left: 140px;
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
             }
+
             h2 {
                 @include fnt.green;
                 font-weight: 400;
                 font-size: 20px;
+
                 span.orange-text {
                     @include fnt.orange;
                 }
@@ -270,6 +351,7 @@ body {
         }
     }
 
+
     footer {
         background-color: colors.$footer-bg;
 
@@ -281,11 +363,13 @@ body {
             padding-bottom: 40px;
             display: grid;
             grid-template-columns: 1fr 1fr;
+
             @include res.xl {
                 grid-template-columns: 1fr 1fr 1fr 1fr;
                 padding-left: 140px;
                 padding-right: 140px;
             }
+
             .copyright-wrapper {
                 grid-column: span 2;
                 font-size: 14px;
@@ -304,6 +388,7 @@ body {
                 grid-column: span 2;
                 padding-bottom: 40px;
                 padding-top: 19px;
+
                 @include res.xl {
                     grid-column: span 1;
                 }
@@ -336,9 +421,12 @@ body {
             form {
                 grid-column: span 2;
                 padding-top: 40px;
-                @include res.xl {
+
+                @include res.m {
                     grid-column: span 1;
+                    padding-top: 0;
                 }
+
                 label {
                     display: block;
                     width: 100%;
@@ -368,4 +456,5 @@ body {
             }
         }
     }
+
 }

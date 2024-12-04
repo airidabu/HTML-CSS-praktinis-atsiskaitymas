@@ -7,28 +7,52 @@
 body {
   margin: 0;
   background-color: white;
+  background: rgb(239, 128, 49);
+  background: linear-gradient(180deg, rgba(239, 128, 49, 0.15) 0%, rgba(239, 128, 49, 0) 100%);
   font-family: "Figtree", sans-serif;
 }
 body header {
   display: flex;
   justify-content: space-between;
   padding: 40px 32px;
-  background: rgb(239, 128, 49);
-  background: linear-gradient(180deg, rgba(239, 128, 49, 0) 0%, rgba(239, 128, 49, 0.15) 69%);
+}
+body header .desktop-navigation {
+  display: none;
+}
+@media (min-width: 500px) {
+  body header .mobile-bar {
+    display: none;
+  }
+}
+@media (min-width: 500px) {
+  body header .mobile-bar {
+    display: none;
+  }
+  body header .desktop-navigation {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+  }
+  body header .desktop-navigation a.navigation-links {
+    display: block;
+    text-decoration: none;
+    font-variant: small-caps;
+    color: #333333;
+  }
 }
 body main .welcome-card {
   display: grid;
   padding-left: 32px;
   padding-bottom: 127px;
   grid-template-columns: 1fr 1fr 1fr;
-  background: rgb(239, 128, 49);
-  background: linear-gradient(180deg, rgba(239, 128, 49, 0.15) 69%, rgba(239, 128, 49, 0) 100%);
   position: relative;
 }
 @media (min-width: 1000px) {
   body main .welcome-card {
     padding-left: 180px;
     padding-right: 200px;
+    align-items: center;
   }
 }
 body main .welcome-card .item {
@@ -212,28 +236,49 @@ body main .connect {
   padding-left: 32px;
   padding-right: 32px;
 }
+body main .connect .connect-item:first-of-type {
+  display: none;
+}
 @media (min-width: 1000px) {
   body main .connect {
     padding-left: 140px;
     padding-right: 140px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    -moz-column-gap: 105px;
+         column-gap: 105px;
+    align-items: center;
+  }
+  body main .connect .connect-item:first-of-type {
+    display: block;
+    grid-column: 1/span 1;
+  }
+  body main .connect .connect-item:first-of-type img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 563px;
+    height: 545px;
   }
 }
-body main .connect h2 {
+body main .connect .connect-item {
+  grid-column: 2/span 1;
+}
+body main .connect .connect-item h2 {
   color: #647B64;
   font-variant: small-caps;
   font-weight: 400;
 }
-body main .connect h2 .orange-text {
+body main .connect .connect-item h2 .orange-text {
   color: #F3B562;
   text-transform: uppercase;
   font-size: 12px;
   display: block;
 }
-body main .connect p {
+body main .connect .connect-item p {
   font-size: 10px;
   margin-bottom: 25px;
 }
-body main .connect a.get-started-button {
+body main .connect .connect-item a.get-started-button {
   padding: 13px 15px;
   color: white;
   display: inline-block;
@@ -380,9 +425,10 @@ body footer .footer-wrapper form {
   grid-column: span 2;
   padding-top: 40px;
 }
-@media (min-width: 1000px) {
+@media (min-width: 500px) {
   body footer .footer-wrapper form {
     grid-column: span 1;
+    padding-top: 0;
   }
 }
 body footer .footer-wrapper form label {
