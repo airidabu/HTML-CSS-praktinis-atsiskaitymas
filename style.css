@@ -203,11 +203,13 @@ body main .additional-features {
   padding-right: 32px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 40px;
 }
 @media (min-width: 1000px) {
   body main .additional-features {
     padding-left: 140px;
     padding-right: 140px;
+    margin-bottom: 71px;
   }
 }
 body main .additional-features h2 {
@@ -217,6 +219,11 @@ body main .additional-features h2 {
   color: #647B64;
   font-variant: small-caps;
 }
+@media (min-width: 1000px) {
+  body main .additional-features h2 {
+    font-size: 40px;
+  }
+}
 body main .additional-features h2 span {
   color: #F3B562;
   text-transform: uppercase;
@@ -224,13 +231,30 @@ body main .additional-features h2 span {
   display: block;
   justify-self: center;
 }
+@media (min-width: 1000px) {
+  body main .additional-features h2 span {
+    font-size: 22px;
+  }
+}
 body main .additional-features .additional-item {
   padding: 34px 22px 31px 22px;
   font-size: 8px;
+  background-color: white;
+}
+@media (min-width: 1000px) {
+  body main .additional-features .additional-item {
+    font-size: 16px;
+    padding: 78px 50px 72px 50px;
+  }
 }
 body main .additional-features .additional-item h3 {
   font-size: 10px;
   text-transform: uppercase;
+}
+@media (min-width: 1000px) {
+  body main .additional-features .additional-item h3 {
+    font-size: 24px;
+  }
 }
 body main .connect {
   padding-left: 32px;
@@ -268,15 +292,30 @@ body main .connect .connect-item h2 {
   font-variant: small-caps;
   font-weight: 400;
 }
+@media (min-width: 1000px) {
+  body main .connect .connect-item h2 {
+    font-size: 40px;
+  }
+}
 body main .connect .connect-item h2 .orange-text {
   color: #F3B562;
   text-transform: uppercase;
   font-size: 12px;
   display: block;
 }
+@media (min-width: 1000px) {
+  body main .connect .connect-item h2 .orange-text {
+    font-size: 24px;
+  }
+}
 body main .connect .connect-item p {
   font-size: 10px;
   margin-bottom: 25px;
+}
+@media (min-width: 1000px) {
+  body main .connect .connect-item p {
+    font-size: 16px;
+  }
 }
 body main .connect .connect-item a.get-started-button {
   padding: 13px 15px;
